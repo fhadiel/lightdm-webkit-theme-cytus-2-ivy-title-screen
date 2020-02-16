@@ -1,10 +1,10 @@
 <template>
     <div class="clock" :class="{ 'small': small }">
-        <span id="hours">{{ part !== '' ? hours : $options.filters.pad(hours) }}</span>:{{ minutes | pad }}<span id="part">{{ part }}</span>
+        <!-- <span id="hours">{{ part !== '' ? hours : $options.filters.pad(hours) }}</span>:{{ minutes | pad }}<span id="part">{{ part }}</span>
 
         <div id="date">
             {{ date }}
-        </div>
+        </div> -->
     </div>
 </template>
 

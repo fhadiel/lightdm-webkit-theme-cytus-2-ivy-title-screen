@@ -91,8 +91,10 @@
                 // Workaround for a form submit bug reloading the route
                 setTimeout(() => {
                     lightdm_login(this.settings.user.username, this.password, () => {
-                        setTimeout(() => lightdm_start(this.settings.desktop.key), 400);
-                        this.$router.push(settings.disableFade ? '/base' : '/intro/login');
+                        window.AEsir(()=> {
+                            lightdm_start(this.settings.desktop.key)
+                        })
+                        this.$router.push(this.settings.disableFade ? '/base' : '/intro/login');
                     }, () => {
                         this.error = true;
                         this.password = '';
@@ -130,14 +132,9 @@
         }
 
         #login-content {
-            margin-top: 10.5vh;
+            margin-top: 20.5vh;
         }
 
-        @media (min-height: 900px) {
-            #login-content {
-                margin-top: 14.25vh;
-            }
-        }
 
         #login-content.no-avatar {
             .item.user {
@@ -188,7 +185,7 @@
     }
 
     #login-content.no-avatar {
-        margin-top: calc(50vh - 165px);
+        margin-top: 30vh;
 
         .item.user {
             margin-top: 0;

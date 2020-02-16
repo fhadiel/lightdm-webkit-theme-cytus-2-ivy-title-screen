@@ -53,8 +53,8 @@ if (window.lightdm_debug) {
             }
         ],
         users: [{
-            display_name: 'John Doe',
-            username: 'johnd'
+            display_name: 'Æsir',
+            username: 'Ivy'
         }, {
             display_name: 'Adrien Navratil',
             username: 'litarvan',
